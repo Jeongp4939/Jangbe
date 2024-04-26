@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <button
       type="button"
-      onClick={() => router.push('/test', { scroll: false })}
+      onClick={() => router.push('/sales', { scroll: false })}
     >
-      Test
+      Sales
     </button>
   )
 }
