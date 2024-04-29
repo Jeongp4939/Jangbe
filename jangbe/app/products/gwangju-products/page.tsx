@@ -1,7 +1,7 @@
 export default function GwangjuProducts() {
   return (
     <>
-      <div>After Service Route</div>
+      <div>GwangjuProducts Route</div>
     </>
   );
 }
