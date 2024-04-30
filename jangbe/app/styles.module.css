@@ -1,17 +1,18 @@
 /* styles.css */
 
 .button {
+    width: 8dvw;
+    height: 5dvh;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50; /* Green */
-    border: none;
+    background-color: #333333; /* #333333 dark gray */
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
   }
-  

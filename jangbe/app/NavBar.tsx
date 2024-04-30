@@ -1,16 +1,23 @@
-'use client'
+"use client";
 
-import { useRouter } from 'next/navigation'
-import styles from './styles.module.css'
+import { useRouter } from "next/navigation";
+import styles from "./styles.module.css";
 
 export default function Home() {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
-    <div>
+    <nav className="flex flex-col">
       <button
         type="button"
-        onClick={() => router.push('/sales', { scroll: false })}
+        onClick={() => router.push("/", { scroll: false })}
+        className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
+      >
+        홈
+      </button>
+      <button
+        type="button"
+        onClick={() => router.push("/sales", { scroll: false })}
         className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
       >
         차량 보기
@@ -18,7 +25,7 @@ export default function Home() {
 
       <button
         type="button"
-        onClick={() => router.push('/after-service', { scroll: false })}
+        onClick={() => router.push("/after-service", { scroll: false })}
         className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
       >
         A/S 서비스
@@ -26,21 +33,11 @@ export default function Home() {
 
       <button
         type="button"
-        onClick={() => router.push('/products', { scroll: false })}
+        onClick={() => router.push("/products", { scroll: false })}
         className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
       >
         차량재고
       </button>
-
-      <button
-        type="button"
-        onClick={() => router.push('/', { scroll: false })}
-        className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
-      >
-        홈
-      </button>
-
-      
-    </div>
-  )
+    </nav>
+  );
 }
