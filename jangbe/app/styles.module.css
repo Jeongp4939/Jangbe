@@ -2,7 +2,9 @@
 
 .button {
     width: 8dvw;
+    min-width: 10rem;
     height: 5dvh;
+    min-height: 3rem;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #333333; /* #333333 dark gray */
