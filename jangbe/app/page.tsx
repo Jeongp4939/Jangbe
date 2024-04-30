@@ -1,16 +1,15 @@
 'use client'
  
 import { useRouter } from 'next/navigation'
- 
+import NavBar from './NavBar'
+
 export default function Home() {
   const router = useRouter()
  
   return (
-    <button
-      type="button"
-      onClick={() => router.push('/sales', { scroll: false })}
-    >
-      Sales
-    </button>
+    <div>
+      <NavBar />
+    </div>
+
   )
 }

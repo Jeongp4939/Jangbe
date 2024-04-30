@@ -1,7 +1,13 @@
+
+import NavBar from '../../NavBar'
+
 export default function EumseongProducts() {
   return (
     <>
-      <div>EumseongProducts Route</div>
+      <div>
+        <NavBar/>
+        EumseongProducts Route
+      </div>
     </>
   );
 }
