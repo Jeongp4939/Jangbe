@@ -2,42 +2,91 @@
 
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
+import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
 
+  const [menuStates, setMenuStates] = useState<boolean[]>([
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const toggleMenu = (index: number) => {
+    setMenuStates((prevStates) => {
+      const newMenuStates = [...prevStates];
+      newMenuStates[index] = !newMenuStates[index];
+      console.log(`menu button ${index} activate`);
+      return newMenuStates;
+    });
+  };
+
   return (
     <nav className="flex flex-col">
-      <button
-        type="button"
-        onClick={() => router.push("/", { scroll: false })}
-        className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
-      >
-        홈
-      </button>
-      <button
-        type="button"
-        onClick={() => router.push("/sales", { scroll: false })}
-        className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
-      >
-        차량 보기
-      </button>
-
-      <button
-        type="button"
-        onClick={() => router.push("/after-service", { scroll: false })}
-        className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
-      >
-        A/S 서비스
-      </button>
-
-      <button
-        type="button"
-        onClick={() => router.push("/products", { scroll: false })}
-        className={styles.button} // CSS 모듈의 클래스 이름을 지정합니다.
-      >
-        차량재고
-      </button>
+      <div>
+        <button
+          type="button"
+          onClick={() => router.push("/", { scroll: false })}
+          className={styles.button}
+        >
+          홈
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          onClick={() => toggleMenu(0)}
+          className={styles.button}
+        >
+          차량 보기
+        </button>
+        <div className={`flex flex-col ${styles.submenu} ${menuStates[0]?"":"hidden"}`}>
+          <button
+            type="button"
+            className={styles.button}
+          >
+            menu 1
+          </button>
+          <button
+            type="button"
+            className={styles.button}
+          >
+            menu 2
+          </button>
+          <button
+            type="button"
+            className={styles.button}
+          >
+            menu 3
+          </button>
+          <button
+            type="button"
+            className={styles.button}
+          >
+            menu 4
+          </button>
+        </div>
+      </div>
+      <div>
+        <button
+          type="button"
+          onClick={() => router.push("/after-service", { scroll: false })}
+          className={styles.button}
+        >
+          A/S 서비스
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          onClick={() => router.push("/products", { scroll: false })}
+          className={styles.button}
+        >
+          차량재고
+        </button>
+      </div>
     </nav>
   );
 }
