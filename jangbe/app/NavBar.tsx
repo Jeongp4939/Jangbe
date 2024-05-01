@@ -7,31 +7,14 @@ import { useState } from "react";
 export default function Home() {
   const router = useRouter();
 
-  const [menuStates1, setMenuStates1] = useState<boolean[]>([
-    false,
-    false,
-    false,
-    false,
-  ]);
-
-  const [menuStates2, setMenuStates2] = useState<boolean[]>([
-    false,
+  const [menuStates, setMenuStates] = useState<boolean[]>([
     false,
     false,
     false,
   ]);
 
-  const toggleMenu1 = (index: number) => {
-    setMenuStates1((prevStates) => {
-      const newMenuStates = [...prevStates];
-      newMenuStates[index] = !newMenuStates[index];
-      console.log(`menu button ${index} activate`);
-      return newMenuStates;
-    });
-  };
-
-  const toggleMenu2 = (index: number) => {
-    setMenuStates2((prevStates) => {
+  const toggleMenu = (index: number) => {
+    setMenuStates((prevStates) => {
       const newMenuStates = [...prevStates];
       newMenuStates[index] = !newMenuStates[index];
       console.log(`menu button ${index} activate`);
@@ -53,12 +36,12 @@ export default function Home() {
       <div>
         <button
           type="button"
-          onClick={() => toggleMenu1(0)}
+          onClick={() => toggleMenu(0)}
           className={styles.button}
         >
           차량 보기
         </button>
-        <div className={`flex flex-col ${styles.submenu} ${menuStates1[0] ? "" : "hidden"}`}>
+        <div className={`flex flex-col ${styles.submenu} ${menuStates[0] ? "" : "hidden"}`}>
           <button
             type="button"
             className={styles.button}
@@ -97,12 +80,12 @@ export default function Home() {
       <div>
         <button
           type="button"
-          onClick={() => toggleMenu2(0)}
+          onClick={() => toggleMenu(2)}
           className={styles.button}
         >
           차량재고
         </button>
-        <div className={`flex flex-col ${styles.submenu} ${menuStates2[0] ? "" : "hidden"}`}>
+        <div className={`flex flex-col ${styles.submenu} ${menuStates[2] ? "" : "hidden"}`}>
           <button
             type="button"
             className={styles.button}
