@@ -108,7 +108,7 @@ export default function Home() {
             className={styles.button}
             onClick={() => router.push("/products/eumseong-products", { scroll: false })}
           >
-            음송재고
+            음성재고
           </button>
           <button
             type="button"
