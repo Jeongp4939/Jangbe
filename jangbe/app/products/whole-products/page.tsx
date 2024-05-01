@@ -1,5 +1,9 @@
+'use client'
+
 import NavBar from '../../NavBar';
 import styles from './styles.module.css';
+import { useRouter } from 'next/navigation';
+
 
 const dummyData = [
   {
@@ -57,6 +61,15 @@ const dummyData = [
 ];
 
 export default function WholeProducts() {
+
+  const router = useRouter();
+
+  const handleEnterProducts = () => {
+    router.push('/products/enter_products');
+  };
+
+
+
   return (
     <>
       <NavBar />
@@ -97,6 +110,7 @@ export default function WholeProducts() {
             ))}
           </tbody>
         </table>
+        <button className={styles.button} onClick={handleEnterProducts}>재고 작성</button>
       </div>
     </>
   );
