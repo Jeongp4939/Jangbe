@@ -7,15 +7,31 @@ import { useState } from "react";
 export default function Home() {
   const router = useRouter();
 
-  const [menuStates, setMenuStates] = useState<boolean[]>([
+  const [menuStates1, setMenuStates1] = useState<boolean[]>([
     false,
     false,
     false,
     false,
   ]);
 
-  const toggleMenu = (index: number) => {
-    setMenuStates((prevStates) => {
+  const [menuStates2, setMenuStates2] = useState<boolean[]>([
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const toggleMenu1 = (index: number) => {
+    setMenuStates1((prevStates) => {
+      const newMenuStates = [...prevStates];
+      newMenuStates[index] = !newMenuStates[index];
+      console.log(`menu button ${index} activate`);
+      return newMenuStates;
+    });
+  };
+
+  const toggleMenu2 = (index: number) => {
+    setMenuStates2((prevStates) => {
       const newMenuStates = [...prevStates];
       newMenuStates[index] = !newMenuStates[index];
       console.log(`menu button ${index} activate`);
@@ -37,12 +53,12 @@ export default function Home() {
       <div>
         <button
           type="button"
-          onClick={() => toggleMenu(0)}
+          onClick={() => toggleMenu1(0)}
           className={styles.button}
         >
           차량 보기
         </button>
-        <div className={`flex flex-col ${styles.submenu} ${menuStates[0]?"":"hidden"}`}>
+        <div className={`flex flex-col ${styles.submenu} ${menuStates1[0] ? "" : "hidden"}`}>
           <button
             type="button"
             className={styles.button}
@@ -81,11 +97,35 @@ export default function Home() {
       <div>
         <button
           type="button"
-          onClick={() => router.push("/products", { scroll: false })}
+          onClick={() => toggleMenu2(0)}
           className={styles.button}
         >
           차량재고
         </button>
+        <div className={`flex flex-col ${styles.submenu} ${menuStates2[0] ? "" : "hidden"}`}>
+          <button
+            type="button"
+            className={styles.button}
+            onClick={() => router.push("/products/eumseong-products", { scroll: false })}
+          >
+            음송재고
+          </button>
+          <button
+            type="button"
+            className={styles.button}
+            onClick={() => router.push("/products/gwangju-products", { scroll: false })}
+          >
+            광주재고
+          </button>
+          <button
+            type="button"
+            className={styles.button}
+            onClick={() => router.push("/products/whole-products", { scroll: false })}
+          >
+            전체재고
+          </button>
+
+        </div>
       </div>
     </nav>
   );
