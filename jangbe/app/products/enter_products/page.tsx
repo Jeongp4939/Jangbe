@@ -1,6 +1,6 @@
 // Enter_Products.tsx
 
-import NavBar from '../../NavBar';
+import NavBar from '../../navbar';
 import styles from './styles.module.css' ;
 
 export default function Enter_Products() {
@@ -9,7 +9,6 @@ export default function Enter_Products() {
       <NavBar />
       <div className={styles.container}>
         <h1>재고 작성 페이지</h1>
-
         
         <form className={styles.form}>
           <label htmlFor="purchaseDate">매입일자:</label>

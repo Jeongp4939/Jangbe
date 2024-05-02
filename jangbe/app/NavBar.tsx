@@ -23,8 +23,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex flex-col">
-      <Header />
+    <nav className={`${styles.navbar} flex flex-col`}>
+      <Header/>
       <div>
         <button
           type="button"

@@ -9,11 +9,9 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <div className="header">
+    <div className={styles.header}>
       <button
-        type="button"
         onClick={() => router.push("/", { scroll: false })}
-        className={styles.button}
       >
         <Image src={"/logo.png"} alt="Logo" width={150} height={30} />
       </button>
