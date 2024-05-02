@@ -3,8 +3,8 @@
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
 import { useState } from "react";
-
-export default function Home() {
+import Header from "./header";
+export default function Navbar() {
   const router = useRouter();
 
   const [menuStates, setMenuStates] = useState<boolean[]>([
@@ -24,47 +24,40 @@ export default function Home() {
 
   return (
     <nav className="flex flex-col">
-      <div>
-        <button
-          type="button"
-          onClick={() => router.push("/", { scroll: false })}
-          className={styles.button}
-        >
-          홈
-        </button>
-      </div>
+      <Header />
       <div>
         <button
           type="button"
           onClick={() => toggleMenu(0)}
           className={styles.button}
         >
-          차량 보기
+          영업
         </button>
-        <div className={`flex flex-col ${styles.submenu} ${menuStates[0] ? "" : "hidden"}`}>
+        <div
+          className={`flex flex-col ${styles.submenu} ${
+            menuStates[0] ? "" : "hidden"
+          }`}
+        >
           <button
             type="button"
+            onClick={() => router.push("/sales/appraisal", { scroll: false })}
             className={styles.button}
           >
-            menu 1
+            감정평가
           </button>
           <button
             type="button"
+            onClick={() => router.push("/sales/release", { scroll: false })}
             className={styles.button}
           >
-            menu 2
+            출고관리
           </button>
           <button
             type="button"
+            onClick={() => router.push("/sales/transportation", { scroll: false })}
             className={styles.button}
           >
-            menu 3
-          </button>
-          <button
-            type="button"
-            className={styles.button}
-          >
-            menu 4
+            배차정보
           </button>
         </div>
       </div>
@@ -85,29 +78,38 @@ export default function Home() {
         >
           차량재고
         </button>
-        <div className={`flex flex-col ${styles.submenu} ${menuStates[2] ? "" : "hidden"}`}>
+        <div
+          className={`flex flex-col ${styles.submenu} ${
+            menuStates[2] ? "" : "hidden"
+          }`}
+        >
           <button
             type="button"
             className={styles.button}
-            onClick={() => router.push("/products/eumseong-products", { scroll: false })}
+            onClick={() =>
+              router.push("/products/eumseong-products", { scroll: false })
+            }
           >
             음성재고
           </button>
           <button
             type="button"
             className={styles.button}
-            onClick={() => router.push("/products/gwangju-products", { scroll: false })}
+            onClick={() =>
+              router.push("/products/gwangju-products", { scroll: false })
+            }
           >
             광주재고
           </button>
           <button
             type="button"
             className={styles.button}
-            onClick={() => router.push("/products/whole-products", { scroll: false })}
+            onClick={() =>
+              router.push("/products/whole-products", { scroll: false })
+            }
           >
             전체재고
           </button>
-
         </div>
       </div>
     </nav>

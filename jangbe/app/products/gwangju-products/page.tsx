@@ -1,5 +1,5 @@
-import NavBar from '../../NavBar'
-import styles from './styles.module.css';
+import NavBar from '../../navbar'
+import styles from '../styles.module.css';
 
 const dummyData = [
   {

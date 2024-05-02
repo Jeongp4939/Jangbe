@@ -1,10 +1,10 @@
-import NavBar from '../../NavBar'
+import NavBar from '../../navbar'
 
 export default function Release() {
   return (
     <>
       <NavBar/>
-      <div>Release Route 채상 변경 테스트</div>
+      <div>Release Route</div>
     </>
   );
 }

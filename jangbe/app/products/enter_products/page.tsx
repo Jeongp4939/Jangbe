@@ -1,5 +1,5 @@
-import NavBar from '../../NavBar';
-import styles from './styles.module.css'; // 스타일 파일 가져오기
+import NavBar from '../../navbar';
+import styles from '../styles.module.css'; // 스타일 파일 가져오기
 
 export default function Enter_Products() {
   return (

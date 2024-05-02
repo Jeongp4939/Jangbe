@@ -1,7 +1,7 @@
 'use client'
  
 import { useRouter } from 'next/navigation'
-import NavBar from './NavBar'
+import NavBar from './navbar'
 
 export default function Home() {
   const router = useRouter()
