@@ -1,6 +1,6 @@
 'use client'
 
-import NavBar from '../../navbar';
+import NavBar from '../../NavBar';
 import styles from '../styles.module.css';
 import { useRouter } from 'next/navigation';
 

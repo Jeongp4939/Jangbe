@@ -1,5 +1,7 @@
-import NavBar from '../../navbar';
-import styles from '../styles.module.css'; // 스타일 파일 가져오기
+// Enter_Products.tsx
+
+import NavBar from '../../NavBar';
+import styles from './styles.module.css' ;
 
 export default function Enter_Products() {
   return (
@@ -8,7 +10,7 @@ export default function Enter_Products() {
       <div className={styles.container}>
         <h1>재고 작성 페이지</h1>
 
-        {/* 입력 폼 */}
+        
         <form className={styles.form}>
           <label htmlFor="purchaseDate">매입일자:</label>
           <input type="date" id="purchaseDate" name="purchaseDate" />
@@ -22,8 +24,9 @@ export default function Enter_Products() {
           <label htmlFor="customerName">고객명:</label>
           <input type="text" id="customerName" name="customerName" />
 
+          
           <label htmlFor="chassisNumber">차대번호:</label>
-          <input type="text" id="chassisNumber" name="chassisNumber" />
+          <input type="number" id="chassisNumber" name="chassisNumber" />
 
           <label htmlFor="year">년식:</label>
           <input type="number" id="year" name="year" />
@@ -31,8 +34,12 @@ export default function Enter_Products() {
           <label htmlFor="salePrice">판매조정가:</label>
           <input type="text" id="salePrice" name="salePrice" />
 
+       
           <label htmlFor="branch">지점:</label>
-          <input type="text" id="branch" name="branch" />
+          <select id="branch" name="branch">
+            <option value="음성">음성</option>
+            <option value="광주">광주</option>
+          </select>
 
           <label htmlFor="remark">특이사항:</label>
           <input type="text" id="remark" name="remark" />

@@ -1,5 +1,8 @@
-import NavBar from '../../navbar'
+'use client'
+
+import NavBar from '../../NavBar';
 import styles from '../styles.module.css';
+import { useRouter } from 'next/navigation';
 
 const dummyData = [
   {
@@ -31,6 +34,14 @@ const dummyData = [
 ];
 
 export default function GwangjuProducts() {
+
+  const router = useRouter();
+
+  const handleEnterProducts = () => {
+    router.push('/products/enter_products');
+  };
+
+
   return (
     <>
      <div>
@@ -72,6 +83,7 @@ export default function GwangjuProducts() {
               ))}
             </tbody>
           </table>
+          <button className={styles.button} onClick={handleEnterProducts}>재고 작성</button>
         </div>
       </div>
     </>
