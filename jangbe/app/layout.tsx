@@ -20,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <NavBar />
-        {children}
+        <div className="flex">
+          <NavBar />
+          <div className="pl-10 pt-8">{children}</div>
+        </div>
       </body>
     </html>
   );
