@@ -59,6 +59,13 @@ export default function Navbar() {
           >
             배차정보
           </button>
+          <button
+            type="button"
+            onClick={() => router.push("/sales/purchase", { scroll: false })}
+            className={styles.button}
+          >
+            매입정보
+          </button>
         </div>
       </div>
       <div>
