@@ -1,6 +1,5 @@
 'use client'
 
-import NavBar from '../../navbar';
 import styles from '../styles.module.css';
 import { useRouter } from 'next/navigation';
 
@@ -45,7 +44,6 @@ export default function EumseongProducts() {
   return (
     <>
       <div>
-        <NavBar />
         <h1>음성 재고</h1>
         
         <div className={styles.tableContainer}>

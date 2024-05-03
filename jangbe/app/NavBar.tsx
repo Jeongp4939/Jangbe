@@ -24,7 +24,6 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} flex flex-col`}>
-      <Header/>
       <div>
         <button
           type="button"

@@ -1,6 +1,5 @@
 'use client'
 
-import NavBar from '../../navbar';
 import styles from '../styles.module.css';
 import { useRouter } from 'next/navigation';
 
@@ -72,7 +71,6 @@ export default function WholeProducts() {
 
   return (
     <>
-      <NavBar />
       <div>전체 재고</div>
 
       <div className={styles.tableContainer}>

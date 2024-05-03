@@ -1,12 +1,10 @@
 // Enter_Products.tsx
 
-import NavBar from '../../navbar';
 import styles from './styles.module.css' ;
 
 export default function Enter_Products() {
   return (
     <>
-      <NavBar />
       <div className={styles.container}>
         <h1>재고 작성 페이지</h1>
         
