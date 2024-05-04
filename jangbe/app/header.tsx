@@ -15,6 +15,10 @@ export default function Header() {
       >
         <Image src={"/logo.png"} alt="Logo" width={150} height={30} />
       </button>
+
+      <button className={styles.profileButton}>
+        홍길동 대리
+      </button>
     </div>
   );
 }
