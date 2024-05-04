@@ -12,7 +12,7 @@ const dummyData = [
     currentLocation: '음성',
     destination: '광주',
     salesRepresentative: '홍길동 대리',
-    approvalStatus: 'O'
+    approvalStatus: '승인'
   }
 ];
 
