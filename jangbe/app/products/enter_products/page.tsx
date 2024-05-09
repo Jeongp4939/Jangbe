@@ -1,13 +1,12 @@
 // Enter_Products.tsx
 
-import styles from './styles.module.css' ;
+import styles from "./styles.module.css";
 
 export default function Enter_Products() {
   return (
     <>
+      <h1>재고 작성 페이지</h1>
       <div className={styles.container}>
-        <h1>재고 작성 페이지</h1>
-        
         <form className={styles.form}>
           <label htmlFor="purchaseDate">매입일자:</label>
           <input type="date" id="purchaseDate" name="purchaseDate" />
@@ -21,7 +20,6 @@ export default function Enter_Products() {
           <label htmlFor="customerName">고객명:</label>
           <input type="text" id="customerName" name="customerName" />
 
-          
           <label htmlFor="chassisNumber">차대번호:</label>
           <input type="number" id="chassisNumber" name="chassisNumber" />
 
@@ -31,7 +29,6 @@ export default function Enter_Products() {
           <label htmlFor="salePrice">판매조정가:</label>
           <input type="text" id="salePrice" name="salePrice" />
 
-       
           <label htmlFor="branch">지점:</label>
           <select id="branch" name="branch">
             <option value="음성">음성</option>
@@ -47,7 +44,9 @@ export default function Enter_Products() {
             <option value="출고">출고</option>
           </select>
 
-          <button className={styles.submitButton} type="submit">저장</button>
+          <button className={styles.submitButton} type="submit">
+            저장
+          </button>
         </form>
       </div>
     </>

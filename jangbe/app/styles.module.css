@@ -25,6 +25,8 @@
 
 .navbar {
   position: sticky;
+  height: 94dvh;
+  background-color: #333;
   top:0;
   left:0;
   z-index: 1000;

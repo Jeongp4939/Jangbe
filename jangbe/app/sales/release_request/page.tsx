@@ -1,13 +1,11 @@
-
-import styles from './styles.module.css' ;
+import styles from "./styles.module.css";
 
 export default function Release_Request() {
   return (
     <>
+      <h1>재고 작성 페이지</h1>
       <div className={styles.container}>
-        <h1>재고 작성 페이지</h1>
-        
-        <form className={styles.form}>
+        <form className={`${styles.form}`}>
           <label htmlFor="purchaseDate">날짜:</label>
           <input type="date" id="purchaseDate" name="purchaseDate" />
 
@@ -30,7 +28,11 @@ export default function Release_Request() {
           <input type="text" id="destination" name="destination" />
 
           <label htmlFor="destinationManager">담당자:</label>
-          <input type="text" id="destinationManager" name="destinationManager" />
+          <input
+            type="text"
+            id="destinationManager"
+            name="destinationManager"
+          />
 
           <label htmlFor="destinationPhone">전화번호:</label>
           <input type="tel" id="destinationPhone" name="destinationPhone" />
@@ -40,6 +42,7 @@ export default function Release_Request() {
 
           <label htmlFor="approvalStatus">승인여부:</label>
           <select id="approvalStatus" name="approvalStatus">
+            {/* 재고 승인은 관리자만 가능하게끔 수정 필요함 */}
             <option value="미승인">미승인</option>
             <option value="승인">승인</option>
           </select>
@@ -47,7 +50,9 @@ export default function Release_Request() {
           <label htmlFor="dispatchInfo">배차정보:</label>
           <input type="text" id="dispatchInfo" name="dispatchInfo" />
 
-          <button className={styles.submitButton} type="submit">저장</button>
+          <button className={styles.submitButton} type="submit">
+            저장
+          </button>
         </form>
       </div>
     </>

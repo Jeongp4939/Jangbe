@@ -53,7 +53,9 @@ export default function Navbar() {
           </button>
           <button
             type="button"
-            onClick={() => router.push("/sales/transportation", { scroll: false })}
+            onClick={() =>
+              router.push("/sales/transportation", { scroll: false })
+            }
             className={styles.button}
           >
             배차정보
@@ -82,7 +84,7 @@ export default function Navbar() {
           onClick={() => toggleMenu(2)}
           className={styles.button}
         >
-          차량재고
+          재고관리
         </button>
         <div
           className={`flex flex-col ${styles.submenu} ${
@@ -93,10 +95,10 @@ export default function Navbar() {
             type="button"
             className={styles.button}
             onClick={() =>
-              router.push("/products/eumseong-products", { scroll: false })
+              router.push("/products/whole-products", { scroll: false })
             }
           >
-            음성재고
+            전체재고
           </button>
           <button
             type="button"
@@ -111,10 +113,10 @@ export default function Navbar() {
             type="button"
             className={styles.button}
             onClick={() =>
-              router.push("/products/whole-products", { scroll: false })
+              router.push("/products/eumseong-products", { scroll: false })
             }
           >
-            전체재고
+            음성재고
           </button>
         </div>
       </div>

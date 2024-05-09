@@ -30,7 +30,7 @@ export default function Release() {
         
         <div className={styles.tableContainer}>
           <table className={styles.table}>
-            <thead>
+            <thead className={styles.thead}>
               <tr>
                 <th>no.</th>
                 <th>날짜</th>
