@@ -75,7 +75,7 @@ export default function WholeProducts() {
 
       <div className={styles.tableContainer}>
         <table className={styles.table}>
-          <thead>
+          <thead className={styles.thead}>
             <tr>
               <th>no.</th>
               <th>매입일자</th>

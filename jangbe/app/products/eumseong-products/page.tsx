@@ -1,54 +1,52 @@
-'use client'
+"use client";
 
-import styles from '../styles.module.css';
-import { useRouter } from 'next/navigation';
+import styles from "../styles.module.css";
+import { useRouter } from "next/navigation";
 
 const dummyData = [
   {
     no: 1,
-    purchaseDate: '23.04.18',
-    category: '미니',
-    model: 'SK20SR-5',
-    customerName: '백인수',
-    chassisNumber: '1019',
+    purchaseDate: "23.04.18",
+    category: "미니",
+    model: "SK20SR-5",
+    customerName: "백인수",
+    chassisNumber: "1019",
     year: 2012,
-    salePrice: '17,000,000',
-    branch: '모든',
-    remark: '-',
-    stockStatus: '음성'
+    salePrice: "17,000,000",
+    branch: "모든",
+    remark: "-",
+    stockStatus: "음성",
   },
   {
     no: 2,
-    purchaseDate: '23.06.12',
-    category: '02H',
-    model: 'U30-5',
-    customerName: '권태영',
-    chassisNumber: '1164',
+    purchaseDate: "23.06.12",
+    category: "02H",
+    model: "U30-5",
+    customerName: "권태영",
+    chassisNumber: "1164",
     year: 2008,
-    salePrice: '18,000,000',
-    branch: '모든',
-    remark: '뿌쪽대',
-    stockStatus: '음성'
-  }
+    salePrice: "18,000,000",
+    branch: "모든",
+    remark: "뿌쪽대",
+    stockStatus: "음성",
+  },
 ];
 
 export default function EumseongProducts() {
-
   const router = useRouter();
 
   const handleEnterProducts = () => {
-    router.push('/products/enter_products');
+    router.push("/products/enter_products");
   };
 
-  
   return (
     <>
       <div>
         <h1>음성 재고</h1>
-        
+
         <div className={styles.tableContainer}>
           <table className={styles.table}>
-            <thead>
+            <thead className={styles.thead}>
               <tr>
                 <th>no.</th>
                 <th>매입일자</th>
@@ -81,7 +79,9 @@ export default function EumseongProducts() {
               ))}
             </tbody>
           </table>
-          <button className={styles.button} onClick={handleEnterProducts}>재고 작성</button>
+          <button className={styles.button} onClick={handleEnterProducts}>
+            재고 작성
+          </button>
         </div>
       </div>
     </>
