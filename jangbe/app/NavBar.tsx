@@ -62,7 +62,7 @@ export default function Navbar() {
           </button>
           <button
             type="button"
-            onClick={() => router.push("/sales/purchase", { scroll: false })}
+            onClick={() => router.push("/products/enter_products", { scroll: false })}
             className={styles.button}
           >
             매입정보
