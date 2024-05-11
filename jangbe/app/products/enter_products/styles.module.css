@@ -1,7 +1,7 @@
 /* styles.module.css */
 
 .container {
-  min-width: 30rem;
+  min-width: 50rem;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -11,17 +11,21 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .form label {
+  min-width: 7rem;
+  margin: 10px;
+  padding: 6px;
   font-weight: bold;
 }
 
 .form input,
 .form select {
-  width: 100%;
-  padding: 8px;
+  width: 40%;
+  margin-bottom: 8px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -48,4 +52,8 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
   margin-bottom: 5px;
+}
+
+.form div {
+  display:flex;
 }

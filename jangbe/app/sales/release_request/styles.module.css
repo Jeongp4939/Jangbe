@@ -1,7 +1,7 @@
 /* styles.module.css */
 
 .container {
-  min-width: 30rem;
+  min-width: 50rem;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -9,36 +9,33 @@
 }
 
 .form {
-  display: grid;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form label {
+  min-width: 7rem;
+  margin: 10px;
+  padding: 6px;
   font-weight: bold;
 }
 
 .form input,
 .form select {
-  width: calc(100% - 8px); 
-  padding: 8px;
+  width: 40%;
+  margin-bottom: 8px;
+  padding: 4px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.form input[type="date"] {
-  width: 100%; 
-}
-
-.form input[type="tel"] {
-  width: 50%; 
-}
-
-.form select {
-  width: 100%; 
+/* 특이사항 칸 크기 조정 */
+#remark {
+  height: 100px; /* 높이를 조정하여 특이사항 칸을 크게 만듭니다 */
 }
 
 .submitButton {
-  margin: 10px;
   padding: 10px;
   background-color: #007bff;
   color: white;
@@ -49,4 +46,14 @@
 
 .submitButton:hover {
   background-color: #0056b3;
+}
+
+.form label {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.form div {
+  display:flex;
 }
