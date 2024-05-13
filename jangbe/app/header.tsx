@@ -8,6 +8,10 @@ import Image from "next/image";
 export default function Header() {
   const router = useRouter();
 
+  const handleLoginClick = () => {
+    router.push("/login");
+  };
+
   return (
     <div className={styles.header}>
       <button
@@ -16,7 +20,7 @@ export default function Header() {
         <Image src={"/logo.png"} alt="Logo" width={150} height={30} />
       </button>
 
-      <button className={styles.profileButton}>
+      <button className={styles.profileButton} onClick={handleLoginClick}>
         홍길동 대리
       </button>
     </div>

@@ -1,0 +1,25 @@
+.loginContainer {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loginTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.loginLabel {
+    font-size: 18px;
+}
+
+.loginInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
